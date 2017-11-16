@@ -9,16 +9,8 @@
 
 <ion-content>
 	<ion-list>
-		<ion-item>
-			Notificación 1
-			<ion-icon name="notifications" item-end></ion-icon>
-		</ion-item>
-		<ion-item>
-			Notificación 2
-			<ion-icon name="notifications" item-end></ion-icon>
-		</ion-item>
-		<ion-item>
-			Notificación 2
+		<ion-item *ngFor="let notification of notifications" (click)="notifTapped(notification)">
+			{{ notification.title }}
 			<ion-icon name="notifications" item-end></ion-icon>
 		</ion-item>
 	</ion-list>
