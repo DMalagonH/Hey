@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { NotificationsService } from '../../services/notifications.service';
 
-@IonicPage()
+import { NotificationDetailPage } from '../notification-detail/notification-detail';
+
 @Component({
   selector: 'page-notifications',
   templateUrl: 'notifications.html',
@@ -16,6 +17,7 @@ export class NotificationsPage {
   }
 
 	notifTapped(notification) {
+		this.navCtrl.push(NotificationDetailPage);
 		console.log(notification);
 	}
 }
