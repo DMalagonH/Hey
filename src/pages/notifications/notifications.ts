@@ -13,4 +13,12 @@ export class NotificationsPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public notificationsServ: NotificationsService) {
 		this.notifications = notificationsServ.getAll();
   }
+
+	markAsRead(notification){
+		console.log('MARK AS READ', notification);
+	}
+
+	delete(notification){
+		console.log('DELETE', notification);
+	};
 }
