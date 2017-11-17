@@ -16,8 +16,7 @@ export class NotificationsPage {
 		this.notifications = notificationsServ.getAll();
   }
 
-	notifTapped(notification) {
-		this.navCtrl.push(NotificationDetailPage);
-		console.log(notification);
+	notificationTapped(notification) {
+		this.navCtrl.push(NotificationDetailPage, { notification: notification});
 	}
 }

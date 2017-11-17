@@ -8,11 +8,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class NotificationDetailPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+	notification = {title: null, body:null, url:null};
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad NotificationDetailPage');
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+		this.notification = navParams.get('notification');
   }
 
 }

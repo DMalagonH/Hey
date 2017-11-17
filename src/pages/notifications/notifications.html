@@ -9,7 +9,7 @@
 
 <ion-content>
 	<ion-list>
-		<ion-item *ngFor="let notification of notifications" (click)="notifTapped(notification)">
+		<ion-item *ngFor="let notification of notifications" (click)="notificationTapped(notification)">
 			{{ notification.title }}
 			<ion-icon name="notifications" item-end></ion-icon>
 		</ion-item>
