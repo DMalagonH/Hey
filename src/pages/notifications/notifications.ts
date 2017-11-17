@@ -8,7 +8,7 @@ import { NotificationsService } from '../../services/notifications.service';
 })
 export class NotificationsPage {
 
-	notifications = [];
+	notifications:any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public notificationsServ: NotificationsService) {
 		this.notifications = notificationsServ.getAll();
