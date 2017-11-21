@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, LoadingController } from 'ionic-angular';
 import { NotificationsService } from '../../services/notifications.service';
 
 @Component({
@@ -10,12 +10,24 @@ export class NotificationsPage {
 
 	notifications:any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public notificationsServ: NotificationsService) {
+  constructor(
+		public navCtrl: NavController,
+		public navParams: NavParams,
+		public notificationsServ: NotificationsService,
+		public loadingCtrl: LoadingController
+	) {
+
+		let loading = this.loadingCtrl.create({
+			spinner: 'crescent',
+			content: 'Getting notifications...',
+			dismissOnPageChange: true,
+		});
+		loading.present();
+
 		notificationsServ.getAll().valueChanges().subscribe(notifications => {
 			this.notifications = notifications;
+			loading.dismiss();
 		});
-
-		// notificationsServ.upload();
   }
 
 	markAsRead(notification){
