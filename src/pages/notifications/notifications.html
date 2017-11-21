@@ -8,7 +8,7 @@
 </ion-header>
 
 <ion-content>
-	<ion-card *ngFor="let notification of notifications">
+	<ion-card *ngFor="let notification of notifications" [ngClass]="{'read':notification.viewed}">
 		<ion-card-header>
 			<ion-row no-padding>
 				<ion-col>
@@ -32,8 +32,7 @@
         </button>
       </ion-col>
       <ion-col text-center>
-        <button ion-button clear small color="danger" icon-start (click)="delete(notification)">
-          <ion-icon name='remove-circle'></ion-icon>
+        <button ion-button clear small icon-start (click)="delete(notification)">
           Delete
         </button>
       </ion-col>
