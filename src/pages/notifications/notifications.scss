@@ -5,7 +5,7 @@ page-notifications {
 
 	.card{
 		border-left: .15em solid;
-		border-color: #488aff;
+		border-color: color($colors, info);
 	}
 
 	.card.read{
@@ -13,18 +13,18 @@ page-notifications {
 	}
 
 	.card.info{
-		border-color: #488aff;
+		border-color: color($colors, info);
 	}
 
 	.card.success{
-		border-color: #32db64;
+		border-color: color($colors, success);
 	}
 
 	.card.warning{
-		border-color: #ffad48;
+		border-color: color($colors, warning);
 	}
 
 	.card.error{
-		border-color: #f53d3d;
+		border-color: color($colors, danger);
 	}
 }
