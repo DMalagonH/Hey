@@ -19,11 +19,13 @@ export class NotificationsPage {
   }
 
 	markAsRead(notification){
-		console.log('MARK AS READ', notification);
+		notification.viewed = true;
+		this.notificationsServ.edit(notification);
 	}
 
 	markAsUnread(notification){
-		console.log('MARK AS UNREAD', notification);
+		notification.viewed = false;
+		this.notificationsServ.edit(notification);
 	}
 
 	delete(notification){
