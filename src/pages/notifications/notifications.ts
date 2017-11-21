@@ -22,6 +22,10 @@ export class NotificationsPage {
 		console.log('MARK AS READ', notification);
 	}
 
+	markAsUnread(notification){
+		console.log('MARK AS UNREAD', notification);
+	}
+
 	delete(notification){
 		console.log('DELETE', notification);
 	};
