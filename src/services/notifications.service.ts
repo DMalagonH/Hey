@@ -23,6 +23,10 @@ export class NotificationsService{
 		this.afDB.database.ref(this.firebase_path+notification.id).set(notification);
 	}
 
+	public remove(notification) {
+		this.afDB.database.ref(this.firebase_path+notification.id).remove();
+	}
+
 	public upload(){
 		let self = this;
 		this.notifications.forEach((n) => {

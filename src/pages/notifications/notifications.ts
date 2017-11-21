@@ -29,6 +29,6 @@ export class NotificationsPage {
 	}
 
 	delete(notification){
-		console.log('DELETE', notification);
+		this.notificationsServ.remove(notification);
 	};
 }
