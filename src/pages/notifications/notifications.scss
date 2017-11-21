@@ -3,7 +3,28 @@ page-notifications {
 		background-color: #ebebeb;
 	}
 
+	.card{
+		border-left: .15em solid;
+		border-color: #488aff;
+	}
+
 	.card.read{
 		background-color: #ebebeb;
+	}
+
+	.card.info{
+		border-color: #488aff;
+	}
+
+	.card.success{
+		border-color: #32db64;
+	}
+
+	.card.warning{
+		border-color: #ffad48;
+	}
+
+	.card.error{
+		border-color: #f53d3d;
 	}
 }

@@ -14,6 +14,8 @@ export class NotificationsPage {
 		notificationsServ.getAll().valueChanges().subscribe(notifications => {
 			this.notifications = notifications;
 		});
+
+		// notificationsServ.upload();
   }
 
 	markAsRead(notification){
