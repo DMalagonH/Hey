@@ -11,7 +11,9 @@ export class NotificationsPage {
 	notifications:any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public notificationsServ: NotificationsService) {
-		this.notifications = notificationsServ.getAll();
+		notificationsServ.getAll().valueChanges().subscribe(notifications => {
+			this.notifications = notifications;
+		});
   }
 
 	markAsRead(notification){

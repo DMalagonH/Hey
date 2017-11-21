@@ -12,6 +12,18 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { NotificationsService } from '../services/notifications.service';
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
+export const firebaseConfig = {
+  apiKey: "AIzaSyADrMElmZMclE24bjbcfUos5775eZhNO48",
+  authDomain: "hey-28cfc.firebaseapp.com",
+  databaseURL: "https://hey-28cfc.firebaseio.com",
+  storageBucket: "hey-28cfc.appspot.com",
+  messagingSenderId: '640232701107'
+};
+
 @NgModule({
   declarations: [
     MyApp,
@@ -22,6 +34,9 @@ import { NotificationsService } from '../services/notifications.service';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+		AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
