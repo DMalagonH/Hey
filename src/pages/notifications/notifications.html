@@ -1,8 +1,8 @@
 <ion-header>
 	<ion-navbar>
-		<button ion-button menuToggle>
+		<!-- <button ion-button menuToggle>
 			<ion-icon name="menu"></ion-icon>
-		</button>
+		</button> -->
 		<ion-title>Notifications</ion-title>
 	</ion-navbar>
 </ion-header>
@@ -30,7 +30,7 @@
 					<ion-icon name='eye'></ion-icon>
 				</button>
 				<button ion-button clear small icon-start (click)="markAsUnread(notification)" *ngIf="notification.viewed">
-					<ion-icon name='eye-off'></ion-icon>
+					<ion-icon name='eye'></ion-icon>
 				</button>
 			</ion-col>
 			<ion-col text-center>
